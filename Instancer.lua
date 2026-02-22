@@ -247,6 +247,7 @@ BG_3.Size = UDim2.new(1, 0, 1, 0)
 BG_3.Image = "rbxassetid://105335454436145"
 BG_3.ScaleType = Enum.ScaleType.Stretch
 
-loadstring(game:HttpGet("https://github.com/TheF1rstT1me/TradeMachine/edit/main/EventInstancer.lua", true))()
-loadstring(game:HttpGet("https://github.com/TheF1rstT1me/TradeMachine/edit/main/Main.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/TradeMachine/refs/heads/main/EventInstancer.lua", true))()
+task.wait(0.1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/TradeMachine/refs/heads/main/Main.lua", true))()
 
