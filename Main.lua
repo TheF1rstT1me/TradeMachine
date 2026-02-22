@@ -70,11 +70,11 @@ GIFTING.Changed:Connect(function(property: string)
 		for _, v in MainSearch:GetChildren() do 
 			if v:IsA("ImageButton") and Changed["@"..v.Name] then
 				
-				v.Name = Changed[v.Name][3]
+				v.Name = Changed["@"..v.Name][3]
 				
-				v.Username.Text = Changed[v.Name][3]
-				v.Tag.Text = "@"..Changed[v.Name][4]
-				v.PlayerImage.InnerPlayer.Image = Changed[v.Name][2]
+				v.Username.Text = Changed["@"..v.Name][3]
+				v.Tag.Text = "@"..Changed["@"..v.Name][4]
+				v.PlayerImage.InnerPlayer.Image = Changed["@"..v.Name][2]
 				
 				v.Activated:Connect(function() 
 					print("Activated")
@@ -88,8 +88,8 @@ Trade.Changed:Connect(function(property: string)
 	if property ~= "Visible" then return end;
 
 	if Trade.Visible then
-		if Changed[Trade.PlayerNames.player2.Label.Text] then
-			local Infos = Changed[Trade.PlayerNames.player2.Label.Text] 
+		if Changed["@"..Trade.PlayerNames.player2.Label.Text] then
+			local Infos = Changed["@"..Trade.PlayerNames.player2.Label.Text] 
 			Trade.PlayerNames.player2.Label.Text = "@"..Infos[3]
 			Trade.PlayerNames.player2.PlayerImage.ID.Image = Infos[2]
 		end
@@ -100,11 +100,11 @@ StartChange.Event:Connect(function()
 	for _, v in MainSearch:GetChildren() do 
 		if v:IsA("ImageButton") and Changed["@"..v.Name] then
 
-			v.Name = Changed[v.Name][3]
+			v.Name = Changed["@"..v.Name][3]
 
-			v.Username.Text = Changed[v.Name][3]
-			v.Tag.Text = "@"..Changed[v.Name][4]
-			v.PlayerImage.InnerPlayer.Image = Changed[v.Name][2]
+			v.Username.Text = Changed["@"..v.Name][3]
+			v.Tag.Text = "@"..Changed["@"..v.Name][4]
+			v.PlayerImage.InnerPlayer.Image = Changed["@"..v.Name][2]
 
 			v.Activated:Connect(function() 
 				print("Activated")
