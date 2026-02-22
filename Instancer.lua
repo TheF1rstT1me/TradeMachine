@@ -104,4 +104,5 @@ OK.TextWrapped = true
 
 UICorner_5.Parent = OK
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/TradeMachine/refs/heads/main/EventInstancer.lua?token=GHSAT0AAAAAADWCXI5R3M3OLFW3GMTN3RXI2M3JRTQ", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheF1rstT1me/TradeMachine/refs/heads/main/Main.lua?token=GHSAT0AAAAAADWCXI5R2C3U3STZ7F4DW6UO2M3JROQ", true))()
