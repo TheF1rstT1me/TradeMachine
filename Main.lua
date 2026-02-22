@@ -88,8 +88,8 @@ Trade.Changed:Connect(function(property: string)
 	if property ~= "Visible" then return end;
 
 	if Trade.Visible then
-		if Changed["@"..Trade.PlayerNames.player2.Label.Text] then
-			local Infos = Changed["@"..Trade.PlayerNames.player2.Label.Text] 
+		if Changed[Trade.PlayerNames.player2.Label.Text] then
+			local Infos = Changed[Trade.PlayerNames.player2.Label.Text] 
 			Trade.PlayerNames.player2.Label.Text = "@"..Infos[3]
 			Trade.PlayerNames.player2.PlayerImage.ID.Image = Infos[2]
 		end
