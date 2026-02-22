@@ -21,6 +21,31 @@ local Changed = {
 	-- ["Affsd3"] = {0000, "", "n", "d"}
 }
 
+local function printTable(t, indent, name)
+	indent = indent or 0
+	name = name or "Table"
+	local prefix = string.rep("  ", indent)
+
+	if indent == 0 then
+		print(string.rep("-", 30))
+		print("📋 " .. name)
+		print(string.rep("-", 30))
+	end
+
+	for key, value in pairs(t) do
+		if type(value) == "table" then
+			print(prefix .. "▶ [" .. tostring(key) .. "]")
+			printTable(value, indent + 1)
+		else
+			print(prefix .. "• " .. tostring(key) .. " : " .. tostring(value))
+		end
+	end
+
+	if indent == 0 then
+		print(string.rep("-", 30))
+	end
+end
+
 UIS.InputBegan:Connect(function(input: InputObject, gameProcessedEvent: boolean) 
 	if gameProcessedEvent then return end;
 	
@@ -67,6 +92,9 @@ GIFTING.Changed:Connect(function(property: string)
 	if property ~= "Enabled" then return end;
 	
 	if GIFTING.Enabled then
+		
+		printTable(Changed, 4, "Data")
+		
 		for _, v in MainSearch:GetChildren() do 
 			if v:IsA("ImageButton") and Changed["@"..v.Name] then
 				
@@ -112,3 +140,5 @@ StartChange.Event:Connect(function()
 		end
 	end
 end)
+
+printTable(Changed, 4, "Data")
