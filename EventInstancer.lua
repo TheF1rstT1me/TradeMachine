@@ -18,9 +18,3 @@ for _, Info in pairs(instances) do
 		obj.Name = Info.Name
 	end)
 end
-
-while #mainFolder:GetChildren() ~= #instances do
-	task.wait()
-end
-
--- loadstring
